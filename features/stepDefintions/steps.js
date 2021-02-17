@@ -24,3 +24,7 @@ Then('Li should process the payment', function () {
 Then('Li should not process the payment', function () {
     assert.equal(this.li.processPayment(this.price), false);
 });
+
+Then('The status of the payment is {string}', function (result) {
+    assert.equal(this.li.processPayment(this.price), result === 'true');
+});

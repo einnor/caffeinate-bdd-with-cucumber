@@ -20,3 +20,7 @@ When('Maria pays with a credit card', function () {
 Then('Li should process the payment', function () {
     assert.equal(this.li.processPayment(this.price), true);
 });
+
+Then('Li should not process the payment', function () {
+    assert.equal(this.li.processPayment(this.price), false);
+});
